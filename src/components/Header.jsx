@@ -21,6 +21,8 @@ export default function Header() {
       {session ? (
         <div className="flex gap-2 items-center">
           <Image
+          width={50}
+          height={40}
             src={session.user.image}
             alt={session.user.name}
             className="w-10 h-10 rounded-full cursor-pointer"
