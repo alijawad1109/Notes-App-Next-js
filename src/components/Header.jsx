@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
+import Image from "next/image";
 
 export default function Header() {
   const { data: session } = useSession();
@@ -19,7 +20,7 @@ export default function Header() {
       </h2>
       {session ? (
         <div className="flex gap-2 items-center">
-          <img
+          <Image
             src={session.user.image}
             alt={session.user.name}
             className="w-10 h-10 rounded-full cursor-pointer"
